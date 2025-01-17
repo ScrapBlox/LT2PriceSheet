@@ -71,11 +71,11 @@ if (isset($_COOKIE['avgPosts'])) {
                     echo "<tr>";
 
                     foreach ($row as $cellIndex => $cell) {
-                        if ($cellIndex == 0 || $cellIndex == 5 || $cellIndex == 11 || $cellIndex == 17 || $cellIndex == 12 || $cellIndex == 6 || $cellIndex == 10) {
+                        if ($cellIndex == 0 || $cellIndex == 5 || $cellIndex == 11 || $cellIndex == 17 || $cellIndex == 12 || $cellIndex == 6) {
                             continue;
                         } else {
-                            if (htmlspecialchars($cell) == "object does not exist in this form" && $cellIndex != 4) {
-                                echo "<td id='".$cellIndex."'>-</td>";
+                            if (htmlspecialchars($cell) == "object does not exist in this form" && $cellIndex != 4 && $cellIndex != 10) {
+                                echo "<td id='".$cellIndex." blank'></td>";
                                 continue;
                             } else {   
                                 if ($ShowAvgPosts == "false") {
