@@ -16,7 +16,7 @@ if (isset($_COOKIE['avgPosts'])) {
         $ShowAvgPosts = $_COOKIE['avgPosts'];
     }
 } else {
-    $ShowAvgPosts = true;
+    $ShowAvgPosts = "false";
 }
 
 ?>
