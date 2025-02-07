@@ -44,11 +44,11 @@ if (isset($_COOKIE['avgPosts'])) {
                         // First row: Use <th> for headers
                         echo "<tr>";
                         foreach ($row as $cellIndex => $cell) {
-                            if ($cellIndex == 0 || $cellIndex == 5 || $cellIndex == 11 || $cellIndex == 17 || $cellIndex == 12 || $cellIndex == 6) {
+                            if ($cellIndex == 0 || $cellIndex == 5 || $cellIndex == 12 || $cellIndex == 6 || $cellIndex == 13 || $cellIndex == 20 || $cellIndex == 7 || $cellIndex == 14) {
                                 continue;
                             } else {
                                 if ($ShowAvgPosts == "false") {
-                                    if ($cellIndex == 4 || $cellIndex == 10 || $cellIndex == 16) {
+                                    if ($cellIndex == 4 || $cellIndex == 18 || $cellIndex == 11) {
                                         continue;
                                     } else {
                                         echo "<th class='sticky' id='header-$cellIndex'>" . htmlspecialchars($cell) . "</th>";
@@ -63,7 +63,7 @@ if (isset($_COOKIE['avgPosts'])) {
                     }
                     if (count($row) == 1) { // Section headers like "< GENERAL >"
                         $rowLength;
-                        if ($ShowAvgPosts == "true") { $rowLength = 13; } else { $rowLength = 10; }
+                        if ($ShowAvgPosts == "true") { $rowLength = 14; } else { $rowLength = 11; }
                         echo "<tr><th id='Sectionheader ".htmlspecialchars($row[0])." ".count($row)."' colspan='". $rowLength ."'> ". htmlspecialchars($row[0]) . "</th></tr>";
                         continue;
                     }
@@ -71,15 +71,15 @@ if (isset($_COOKIE['avgPosts'])) {
                     echo "<tr>";
 
                     foreach ($row as $cellIndex => $cell) {
-                        if ($cellIndex == 0 || $cellIndex == 5 || $cellIndex == 11 || $cellIndex == 17 || $cellIndex == 12 || $cellIndex == 6) {
+                        if ($cellIndex == 0 || $cellIndex == 5 || $cellIndex == 12 || $cellIndex == 6 || $cellIndex == 13 || $cellIndex == 20 || $cellIndex == 7 || $cellIndex == 14) {
                             continue;
                         } else {
-                            if (htmlspecialchars($cell) == "object does not exist in this form" && $cellIndex != 4 && $cellIndex != 10) {
+                            if (htmlspecialchars($cell) == "object does not exist in this form" && $cellIndex != 4 && $cellIndex != 10 && $cellIndex != 11) {
                                 echo "<td id='".$cellIndex." blank'></td>";
                                 continue;
                             } else {   
                                 if ($ShowAvgPosts == "false") {
-                                    if ($cellIndex == 4 || $cellIndex == 10 || $cellIndex == 16) {
+                                    if ($cellIndex == 4 || $cellIndex == 18 || $cellIndex == 11) {
                                         continue;
                                     } else {
                                         echo "<td id='".$cellIndex."'>" . htmlspecialchars($cell) . "</td>";
